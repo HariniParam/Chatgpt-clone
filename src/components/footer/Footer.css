@@ -1,0 +1,42 @@
+.footer-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    gap: 0.5rem;
+    padding: 1rem;
+    cursor: pointer;
+    margin: 0.5rem 0.5rem 0.5rem 0rem;
+    border-radius: 0.5rem;
+}
+
+.footer-div {
+    display: flex;
+    flex-direction: row;
+    gap: 0.5rem;
+}
+
+.profile-icon {
+    padding-top: 0.5rem;
+    font-size: 2rem !important;
+}
+
+.footer-detail {
+    display: flex;
+    flex-direction: column;
+}
+
+.footer-name {
+    margin: 0;
+}
+
+.upgrade-btn {
+    border-radius: 2rem !important;
+    border: 1px solid #4b5563 !important;
+    color: white !important;
+    padding: 0rem 0.75rem !important;
+    text-transform: none !important;
+}
+
+.footer-container:hover {
+    background-color: #2a2b32;
+}

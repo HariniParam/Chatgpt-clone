@@ -1,0 +1,42 @@
+.chat-container {
+    padding: 0 0.25rem;
+    height: 100%;
+    overflow-y: scroll;
+    scrollbar-width: thin;
+    scrollbar-color: rgba(255, 255, 255, 0.25) transparent;
+    margin-bottom: 1rem;
+}
+
+.chat-title {
+    font-size: 1rem;
+    color: #9a9b9f;
+    margin-bottom: 0.5rem;
+}
+
+.chat-list {
+    display: flex;
+    flex-direction: column;
+    gap: 0.25rem;
+}
+
+.chat-item {
+    display: flex;
+    align-items: center;
+    gap: 0.15rem;
+    padding: 0.25rem 0.5rem;
+    border-radius: 0.25rem;
+    color: white;
+    cursor: pointer;
+    font-size: 1rem;
+}
+
+.chat-text {
+    flex: 1;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.chat-item:hover {
+    background-color: #2a2b32;
+}
