@@ -3,18 +3,13 @@
     flex-direction: row;
     justify-content: space-between;
     margin-bottom: 1rem;
-} 
-
-.btn-icon {
-    background: transparent;
-    border: none;
-    cursor: pointer;
-    padding: 0.25rem;
-    margin-right: 1rem;
 }
 
-.btn-icon:hover {
-    background: gray;
-    
-    border-radius: 15%;
+.header-icon-btn {
+    color: white !important;
+    border-radius: 50% !important;
+}
+
+.header-icon-btn:hover {
+    background-color: rgba(147, 139, 139, 0.3) !important;
 }

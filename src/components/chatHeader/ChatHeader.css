@@ -1,0 +1,44 @@
+.chat-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem;
+}
+
+.gpt-btn {
+  width: 8.5rem;
+  font-size: 1.2rem !important;
+  font-weight: 400 !important;
+  text-transform: none !important;
+  color: white !important;
+  border: none !important;
+  border-radius: 0.75rem !important;
+}
+
+.gpt-btn:hover {
+  background-color: #2a2b32 !important;
+  border-color: #2a2b32 !important;
+}
+
+.rounded-btn {
+  width: 8rem;
+  border-radius: 1.5rem !important;
+  padding: 0.5rem 0.75rem !important;
+  text-transform: none !important;
+  background-color: rgb(82, 72, 159) !important;
+  border: 1px solid rgb(60, 54, 107) !important;
+  color: white !important;
+}
+
+.rounded-btn:hover {
+  background-color: rgb(61, 52, 125) !important;
+}
+
+.rounded-icon {
+  border-radius: 50% !important;
+  color: white !important;
+}
+
+.rounded-icon:hover {
+  background-color: rgba(147, 139, 139, 0.3) !important;
+}

@@ -1,32 +1,29 @@
+.sidepanel-drawer {
+    width: 16rem;
+}
+
+.sidepanel-paper {
+    width: 16rem;;
+    background-color: rgb(23, 23, 23) !important;
+    border-right: 1px solid #2a2b32;
+    color: white;
+    scrollbar-width: none !important;
+    overflow: hidden !important;
+}
+
 .sidepanel-container {
-    width: 15%;
+    height: 100%;
     padding: 1rem 0rem 0rem 1rem;
     display: flex;
     flex-direction: column;
-    background-color: black;
 }
 
 .option-container {
-    display: flex;
-    flex-direction: column;
     gap: 0.25rem;
     margin-right: 1rem;
     margin-bottom: 1rem;
 }
 
-.sidebarButton {
-    color: white !important;
-    border: none !important;
-    display: flex !important;
-    justify-content: flex-start !important;
-    text-transform: none !important;
-}
-
-.sidebarButton:hover{
-    background-color: #2a2b32 !important;
-}
-
 .divider {
-    height: 2px;
     background-color: #2a2b32;
 }

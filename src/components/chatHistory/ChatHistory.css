@@ -8,7 +8,7 @@
 }
 
 .chat-title {
-    font-size: 1rem;
+    font-size: 1rem !important;
     color: #9a9b9f;
     margin-bottom: 0.5rem;
 }
@@ -20,23 +20,19 @@
 }
 
 .chat-item {
-    display: flex;
-    align-items: center;
-    gap: 0.15rem;
-    padding: 0.25rem 0.5rem;
-    border-radius: 0.25rem;
-    color: white;
+    padding: 0.25rem 0.5rem !important;
+    border-radius: 0.25rem !important;
+    color: white !important;
     cursor: pointer;
-    font-size: 1rem;
 }
 
 .chat-text {
-    flex: 1;
     white-space: nowrap;
     overflow: hidden;
     text-overflow: ellipsis;
+    font-size: 0.9rem !important;
 }
 
 .chat-item:hover {
-    background-color: #2a2b32;
+    background-color: #2a2b32 !important;
 }

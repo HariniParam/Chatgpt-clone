@@ -2,3 +2,28 @@
   max-width: 100dvw;
   height: 100dvh;
 }
+
+.button {
+    color: white !important;
+    border: none !important;
+    display: flex !important;
+    justify-content: flex-start !important;
+    text-transform: none !important;
+}
+
+.button:hover{
+    background-color: #2a2b32 !important;
+}
+
+.btn-icon {
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    padding: 0.25rem;
+    margin-right: 1rem;
+}
+
+.btn-icon:hover {
+    background: gray;
+    border-radius: 15%;
+}

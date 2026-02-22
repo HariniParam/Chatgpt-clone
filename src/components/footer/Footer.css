@@ -1,23 +1,31 @@
 .footer-container {
     display: flex;
-    flex-direction: row;
     justify-content: space-between;
+    align-items: center;
     gap: 0.5rem;
-    padding: 1rem;
-    cursor: pointer;
+    padding: 0.75rem;
     margin: 0.5rem 0.5rem 0.5rem 0rem;
     border-radius: 0.5rem;
+    cursor: pointer;
+}
+
+.footer-container:hover {
+    background-color: #2a2b32;
 }
 
 .footer-div {
     display: flex;
-    flex-direction: row;
+    align-items: center;
     gap: 0.5rem;
 }
 
+.profile-btn {
+    padding: 0 !important;
+}
+
 .profile-icon {
-    padding-top: 0.5rem;
     font-size: 2rem !important;
+    color: white;
 }
 
 .footer-detail {
@@ -27,16 +35,23 @@
 
 .footer-name {
     margin: 0;
+    color: white;
+    font-size: 0.95rem;
+}
+
+.footer-free {
+    font-size: 0.75rem;
+    color: #9ca3af;
 }
 
 .upgrade-btn {
     border-radius: 2rem !important;
     border: 1px solid #4b5563 !important;
     color: white !important;
-    padding: 0rem 0.75rem !important;
+    padding: 0.1rem 0.75rem !important;
     text-transform: none !important;
 }
 
-.footer-container:hover {
-    background-color: #2a2b32;
+.upgrade-btn:hover {
+    background-color: #1a1b1f !important;
 }

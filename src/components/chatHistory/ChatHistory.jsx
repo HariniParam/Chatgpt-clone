@@ -1,20 +1,22 @@
-import React from 'react'
-import chatHistoryData from '../../data/chatHistoryData'
-import './ChatHistory.css'
+import React from "react";
+import { Box, List, ListItemButton, Typography } from "@mui/material";
+import chatHistoryData from "../../data/chatHistoryData";
+import "./ChatHistory.css";
 
 function ChatHistory() {
   return (
-    <div className='chat-container'>
-      <p className='chat-title'>Your chats</p>
-      <div className='chat-list'>
-        {chatHistoryData.map((chat)=>(
-            <div key={chat.id} className="chat-item">
-                <span className='chat-text'>{chat.title}</span>
-            </div>
+    <Box className="chat-container">
+      <Typography className="chat-title">Your chats</Typography>
+
+      <List className="chat-list">
+        {chatHistoryData.map((chat) => (
+          <ListItemButton key={chat.id} className="chat-item" disableRipple>
+            <Typography className="chat-text">{chat.title}</Typography>
+          </ListItemButton>
         ))}
-      </div>
-    </div>
-  )
+      </List>
+    </Box>
+  );
 }
 
-export default ChatHistory
+export default ChatHistory;

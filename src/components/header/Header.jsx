@@ -1,19 +1,21 @@
-import React from 'react'
-import './Header.css'
-import chatgptIcon from '../../assets/chatgpt.svg'
-import ViewSidebarIcon from '@mui/icons-material/ViewSidebar';
+import React from "react";
+import { Box, IconButton } from "@mui/material";
+import ViewSidebarIcon from "@mui/icons-material/ViewSidebar";
+import chatgptIcon from "../../assets/chatgpt.svg";
+import "./Header.css";
 
 function Header() {
   return (
-    <div className='header-container'>
-        <button className='btn-icon'>
-            <img src={chatgptIcon} alt='chatgpt logo'/>
-        </button>
-        <button className='btn-icon'>
-            <ViewSidebarIcon />
-        </button>
-    </div>
-  )
+    <Box className="header-container">
+      <IconButton className="header-icon-btn">
+        <img src={chatgptIcon} alt="ChatGPT logo" className="chatgpt-logo" />
+      </IconButton>
+
+      <IconButton className="header-icon-btn">
+        <ViewSidebarIcon />
+      </IconButton>
+    </Box>
+  );
 }
 
-export default Header
+export default Header;
