@@ -1,6 +1,6 @@
 :root {
-  max-width: 100dvw;
-  height: 100dvh;
+    max-width: 100dvw;
+    height: 100dvh;
 }
 
 .button {
@@ -26,4 +26,16 @@
 .btn-icon:hover {
     background: gray;
     border-radius: 15%;
+}
+
+.custom-tooltip {
+    background-color: black !important;
+    color: white !important;
+    font-size: 0.8rem !important;
+    border-radius: 0.5rem !important;
+    padding: 0.5rem !important;
+}
+
+.custom-tooltip-arrow {
+    color: black !important;
 }

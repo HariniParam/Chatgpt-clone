@@ -1,9 +1,5 @@
-.sidepanel-drawer {
-    width: 16rem;
-}
-
 .sidepanel-paper {
-    width: 16rem;;
+    width: 16rem;
     background-color: rgb(23, 23, 23) !important;
     border-right: 1px solid #2a2b32;
     color: white;
@@ -11,9 +7,13 @@
     overflow: hidden !important;
 }
 
+.sidepanel-paper.collapsed {
+    width: 4.5rem;
+}
+
 .sidepanel-container {
     height: 100%;
-    padding: 1rem 0rem 0rem 1rem;
+    padding: 0.3rem 0.5rem 0.7rem 0.5rem;
     display: flex;
     flex-direction: column;
 }
@@ -26,4 +26,9 @@
 
 .divider {
     background-color: #2a2b32;
+}
+
+.sidepanel-paper.collapsed .button {
+    justify-content: center;
+    min-width: 0;
 }

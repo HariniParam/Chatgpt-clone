@@ -7,10 +7,16 @@
     margin-bottom: 1rem;
 }
 
+.chat-history-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    cursor: pointer;
+}
+
 .chat-title {
     font-size: 1rem !important;
     color: #9a9b9f;
-    margin-bottom: 0.5rem;
 }
 
 .chat-list {
@@ -20,7 +26,7 @@
 }
 
 .chat-item {
-    padding: 0.25rem 0.5rem !important;
+    padding: 0.15rem 0.4rem !important;
     border-radius: 0.25rem !important;
     color: white !important;
     cursor: pointer;
@@ -35,4 +41,24 @@
 
 .chat-item:hover {
     background-color: #2a2b32 !important;
+}
+
+.more-option {
+    opacity: 0;
+    pointer-events: none;
+    color: white !important;
+}
+
+.chat-item:hover .more-option {
+    opacity: 1;
+    pointer-events: auto;
+}
+
+.dropdown-arrow {
+    transition: transform 0.3s;
+    color: #9a9b9f;
+}
+
+.dropdown-arrow.open {
+    transform: rotate(180deg);
 }

@@ -1,0 +1,35 @@
+.popup-paper {
+  background-color: #2f2f2f !important;
+  color: white;
+  border-radius: 12px !important;
+  min-width: 220px;
+  margin-top: 8px;
+}
+
+.popup-item {
+  font-size: 0.95rem;
+  color: white !important;
+  padding: 10px 14px;
+}
+
+.popup-item:hover {
+  background-color: rgba(255, 255, 255, 0.08) !important;
+}
+
+.popup-icon {
+  color: white !important;
+  min-width: 36px !important;
+}
+
+.popup-divider {
+  background-color: #444 !important;
+  margin: 6px 0;
+}
+
+.popup-item.delete {
+  color: #ef4444 !important;
+}
+
+.popup-icon.delete {
+  color: #ef4444 !important;
+}

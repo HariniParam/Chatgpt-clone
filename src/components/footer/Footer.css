@@ -9,6 +9,13 @@
     cursor: pointer;
 }
 
+.footer-container.collapsed {
+    flex-direction: column;
+    justify-content: flex-start;
+    margin-top: auto;
+    align-items: center;
+}
+
 .footer-container:hover {
     background-color: #2a2b32;
 }

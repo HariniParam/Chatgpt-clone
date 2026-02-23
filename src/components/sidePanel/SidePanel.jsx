@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import { Drawer, Box, Stack, Button, Divider } from "@mui/material";
 
 import Header from "../header/Header";
@@ -11,79 +11,137 @@ import CollectionsOutlinedIcon from "@mui/icons-material/CollectionsOutlined";
 import AppsOutlinedIcon from "@mui/icons-material/AppsOutlined";
 import TerminalOutlinedIcon from "@mui/icons-material/TerminalOutlined";
 import CreateNewFolderOutlinedIcon from "@mui/icons-material/CreateNewFolderOutlined";
+import { Tooltip } from "@mui/material";
 
 import "./SidePanel.css";
+import SearchChat from "../searchChat/SearchChat";
 
-function SidePanel() {
+function SidePanel({ isCollapsed, setCollapsed, onNewChat }) {
+
+  const [isSearchActive, setSearchActive] = useState(false);
+
+  const toggleSearch = () => {
+    setSearchActive(!isSearchActive);
+  }
+
   return (
     <Drawer
       variant="permanent"
       anchor="left"
       className="sidepanel-drawer"
       PaperProps={{
-        className: "sidepanel-paper",
+        className: isCollapsed
+          ? "sidepanel-paper collapsed"
+          : "sidepanel-paper",
       }}
     >
       <Box className="sidepanel-container">
-        <Header />
+        <Header collapsed={isCollapsed} setCollapsed={setCollapsed} />
 
         <Stack className="option-container">
-          <Button
-            startIcon={<EditSquareIcon />}
-            variant="outlined"
-            fullWidth
-            className="button"
+          <Tooltip
+            title="New chat"
+            placement="right"
+            arrow
+            disableHoverListener={!isCollapsed}
+            classes={{
+              tooltip: "custom-tooltip",
+              arrow: "custom-tooltip-arrow",
+            }}
           >
-            New chat
-          </Button>
-          <Button
-            startIcon={<SearchIcon />}
-            variant="outlined"
-            fullWidth
-            className="button"
+            <Button
+              startIcon={<EditSquareIcon />}
+              variant="outlined"
+              fullWidth
+              className="button"
+              onClick={onNewChat}
+            >
+              {!isCollapsed && "New chat"}
+            </Button>
+          </Tooltip>
+          <Tooltip
+            title="Search chats"
+            placement="right"
+            arrow
+            disableHoverListener={!isCollapsed}
+            classes={{
+              tooltip: "custom-tooltip",
+              arrow: "custom-tooltip-arrow",
+            }}
           >
-            Search chats
-          </Button>
-          <Button
-            startIcon={<CollectionsOutlinedIcon />}
-            variant="outlined"
-            fullWidth
-            className="button"
+            <Button
+              startIcon={<SearchIcon />}
+              variant="outlined"
+              fullWidth
+              className="button"
+              onClick={toggleSearch}
+            >
+              {!isCollapsed && "Search chats"}
+            </Button>
+          </Tooltip>
+          <Tooltip
+            title="Images"
+            placement="right"
+            arrow
+            disableHoverListener={!isCollapsed}
+            classes={{
+              tooltip: "custom-tooltip",
+              arrow: "custom-tooltip-arrow",
+            }}
           >
-            Images
-          </Button>
-          <Button
-            startIcon={<AppsOutlinedIcon />}
-            variant="outlined"
-            fullWidth
-            className="button"
-          >
-            Apps
-          </Button>
-          <Button
-            startIcon={<TerminalOutlinedIcon />}
-            variant="outlined"
-            fullWidth
-            className="button"
-          >
-            Codex
-          </Button>
-          <Button
-            startIcon={<CreateNewFolderOutlinedIcon />}
-            variant="outlined"
-            fullWidth
-            className="button"
-          >
-            Projects
-          </Button>
+            <Button
+              startIcon={<CollectionsOutlinedIcon />}
+              variant="outlined"
+              fullWidth
+              className="button"
+            >
+              {!isCollapsed && "Images"}
+            </Button>
+          </Tooltip>
+          {!isCollapsed && (
+            <Button
+              startIcon={<AppsOutlinedIcon />}
+              variant="outlined"
+              fullWidth
+              className="button"
+            >
+              Apps
+            </Button>
+          )}
+          {!isCollapsed && (
+            <Button
+              startIcon={<TerminalOutlinedIcon />}
+              variant="outlined"
+              fullWidth
+              className="button"
+            >
+              Codex
+            </Button>
+          )}
+
+          {!isCollapsed && (
+            <Button
+              startIcon={<CreateNewFolderOutlinedIcon />}
+              variant="outlined"
+              fullWidth
+              className="button"
+            >
+              Projects
+            </Button>
+          )}
         </Stack>
 
-        <ChatHistory />
+        {!isCollapsed && <ChatHistory />}
 
         <Divider className="divider" />
 
-        <Footer />
+        <Footer collapsed={isCollapsed} />
       </Box>
+      <SearchChat
+        open={isSearchActive}
+        onClose={() => setSearchActive(false)}
+        onNewChat={onNewChat}
+      />
     </Drawer>
   );
 }

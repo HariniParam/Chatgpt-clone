@@ -2,7 +2,7 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 1rem;
+  padding: 1rem !important;
 }
 
 .gpt-btn {
@@ -41,4 +41,88 @@
 
 .rounded-icon:hover {
   background-color: rgba(147, 139, 139, 0.3) !important;
+}
+
+.model-dropdown-card {
+  position: absolute;
+  top: calc(100% + 4px);
+  left: 0;
+  width: 330px;
+  background-color: #2f2f2f;
+  border-radius: 12px;
+  padding: 8px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.5);
+  z-index: 1000;
+  border: 1px solid #424242;
+}
+
+.dropdown-item {
+  display: flex;
+  align-items: flex-start;
+  padding: 12px;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: background-color 0.2s;
+  color: #ececec;
+}
+
+.dropdown-item:hover {
+  background-color: #3e3e3e;
+}
+
+.item-icon-wrapper {
+  margin-right: 12px;
+  margin-top: 2px;
+  color: #b4b4b4;
+}
+
+.item-text-content {
+  flex-grow: 1;
+}
+
+.item-title {
+  font-size: 0.95rem !important;
+  font-weight: 500 !important;
+  line-height: 1.2 !important;
+}
+
+.item-desc {
+  font-size: 0.8rem !important;
+  color: #b4b4b4 !important;
+  margin-top: 2px !important;
+}
+
+.upgrade-pill-btn {
+  background-color: transparent !important;
+  border: 1px solid #676767 !important;
+  color: white !important;
+  border-radius: 20px !important;
+  text-transform: none !important;
+  padding: 2px 12px !important;
+  font-size: 0.85rem !important;
+  font-weight: 600 !important;
+  min-width: unset !important;
+}
+
+.upgrade-pill-btn:hover {
+  background-color: #4a4a4a !important;
+}
+
+.check-icon {
+  color: #ececec;
+  align-self: center;
+  margin-left: 8px;
+}
+
+.gpt-selector-btn {
+  color: #ececec !important;
+  text-transform: none !important;
+  font-size: 1.1rem !important;
+  font-weight: 600 !important;
+  padding: 6px 12px !important;
+  border-radius: 8px !important;
+}
+
+.gpt-selector-btn:hover {
+  background-color: #2f2f2f !important;
 }
